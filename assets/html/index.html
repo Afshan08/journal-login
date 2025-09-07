@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Memory Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #00796b;
+            text-align: center;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        .memories {
+            margin-top: 30px;
+        }
+        .memory {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .memory h3 {
+            color: #00796b;
+            margin: 0;
+        }
+        .memory p {
+            margin: 5px 0;
+        }
+        .logout {
+            float: right;
+            margin-top: -30px;
+        }
+        .logout a {
+            color: white;
+            text-decoration: none;
+        }
+        .logout a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Memory Journal</h1>
+        <div class="logout">
+            <a href="login.html">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Add a New Memory</h2>
+        <form action="#" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label>
+                <input type="checkbox" id="with-friends" name="with-friends"> Share with friends
+            </label>
+            
+            <button type="submit">Add Memory</button>
+        </form>
+        
+        <div class="memories">
+            <h2>Your Memories</h2>
+            <div class="memory">
+                <h3>Sample Memory 1</h3>
+                <p><strong>Date:</strong> 2023-10-01</p>
+                <p>This is a sample memory description. It was a great day!</p>
+                <p><em>Shared with friends: Yes</em></p>
+            </div>
+            <div class="memory">
+                <h3>Sample Memory 2</h3>
+                <p><strong>Date:</strong> 2023-09-15</p>
+                <p>Another wonderful memory from the past.</p>
+                <p><em>Shared with friends: No</em></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
